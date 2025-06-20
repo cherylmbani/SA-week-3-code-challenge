@@ -5,6 +5,9 @@ function main(){
     displayPosts();
     addNewPostListener();
 
+    document.getElementById('post-list')
+    .addEventListener("click", handlePostClick);
+
 }
 function displayPosts(){
         fetch("http://localhost:3000/posts")
@@ -19,10 +22,12 @@ function displayPosts(){
 
             })
         })
+        .catch(error=>{
+            console.log(error);
+        });
     }
 //
-const postListDiv = document.getElementById('post-list');
-postListDiv.addEventListener("click", handlePostClick);
+
 
 function handlePostClick(event){
     const clickedItem = event.target.closest('[data-id]');
@@ -48,6 +53,9 @@ function handlePostClick(event){
 
     
         
+    })
+    .catch(error=>{
+        console.log(error);
     });
 }
 
