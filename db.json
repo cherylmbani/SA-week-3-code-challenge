@@ -1,0 +1,17 @@
+{
+  "dogs": [
+    {
+      "id": "6962",
+      "dogName": "Byron",
+      "dogBreed": "Poodle"
+    },
+    {
+      "id": "0cc6",
+      "dogName": "Byron",
+      "dogBreed": "Poodle"
+    }
+  ],
+  "cats": [],
+  "users": [],
+  "robots": []
+}
