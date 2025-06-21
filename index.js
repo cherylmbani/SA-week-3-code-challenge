@@ -41,6 +41,8 @@ function handlePostClick(event){
     if(!clickedItem) return;
 
     const id=clickedItem.dataset.id;
+
+    if(id ==="local") return;
     fetch(`http://localhost:3000/posts/${id}`)
     .then(response => response.json())
     .then(post =>{
@@ -60,7 +62,7 @@ function showPost(post){
     divDetail.appendChild(p);
         
     let address = document.createElement("address");
-    address.textContent = post.author;
+    address.textContent = `Author: ${post.author}`;
     divDetail.appendChild(address);
 
     if(post.image){
@@ -86,17 +88,31 @@ function addNewPostListener(){
         if(!title || !content || !author) return;
         
         const newPost = {title, content, author};
-        
-        appendPostToList(newPost);
-        form.reset();
-    });
+
+        fetch("http://localhost:3000/posts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newPost)
+        })
+        .then(response => response.json())
+        .then(savedPost => {
+            appendPostToList(savedPost);           
+            showPost(savedPost);        
+            form.reset();
+        })
+        .catch(error => console.log("Error saving post:", error));
+
+
+     });
 }
 
     function appendPostToList(post){
         const ul=document.querySelector("#post-list ul");
         const li=document.createElement("li");
         li.textContent = post.title;
-        li.dataset.id = "new";
+        li.dataset.id = post.id;
 
         ul.appendChild(li);
     }

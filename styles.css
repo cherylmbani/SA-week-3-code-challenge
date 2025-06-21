@@ -5,3 +5,29 @@ font-family: 'Times New Roman', Times, serif;
 padding: 16px;
 }
 
+#post-detail img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+#new-post-form button {
+  background-color: blue;
+  margin-top: 20px;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+h1#main-heading{
+    font-size: 40px;
+    text-align: center;
+}

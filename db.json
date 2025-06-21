@@ -1,27 +1,31 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "My First Blog Post",
       "content": "This is my very first blog post. I'm excited to start sharing with the world!",
       "author": "Cheryl Mbani",
       "image": "https://fastly.picsum.photos/id/135/300/200.jpg?hmac=arCUtG1wKD1aW--8xhotWn09pv86W9C6lLPmbgbZ4iI"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Building This Blog Post",
       "content": "In this post, I explain how I used HTML, CSS, JavaScript, and JSON Server to make this blog site.",
       "author": "Cheryl Mbani",
       "image": "https://placekitten.com/300/200"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "My Favorite Coding Tips",
       "content": "Here are a few tricks that have helped me as a beginner coder...",
       "author": "Cheryl Mbani",
       "image": "https://loremflickr.com/cache/resized/defaultImage.small_300_200_nofilter.jpg"
-
+    },
+    {
+      "id": "ef7f",
+      "title": "Third BLog",
+      "content": "Hello this is another blogf post",
+      "author": "Cheryl Mbani"
     }
   ]
 }
-
