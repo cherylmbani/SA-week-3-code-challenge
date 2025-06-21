@@ -1,17 +1,19 @@
 {
-  "dogs": [
+  "posts": [
     {
-      "id": "6962",
-      "dogName": "Byron",
-      "dogBreed": "Poodle"
+      "id": 1,
+      "title": "My First Blog Post",
+      "content": "This is the content of the first blog post.",
+      "author": "Jane Doe",
+      "image": "https://placekitten.com/200/300"
     },
     {
-      "id": "0cc6",
-      "dogName": "Byron",
-      "dogBreed": "Poodle"
+      "id": 2,
+      "title": "Another Day, Another Post",
+      "content": "More blog content goes here.",
+      "author": "John Smith",
+      "image": "https://placekitten.com/300/200"
     }
-  ],
-  "cats": [],
-  "users": [],
-  "robots": []
+  ]
 }
+
