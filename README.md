@@ -52,20 +52,24 @@ Setup Instructions
 ```bash
 npm install -g json-server
 
-4. start the JSON Server using json-server db.json
+ 4. Start the JSON Server
 
-License
+Start the backend server by running:
+
+```bash
+json-server db.json
+
+
+##  License
 
 This project is licensed for educational and personal use.
 
 You are free to:
 
-- Use and modify the code
-- Share your own versions
-- Practice and learn from it
+- Use and modify the code  
+- Share your own versions  
+- Practice and learn from it  
 
 You may **not** sell or distribute it commercially without permission.
 
-Created by Cheryl Mbani | 2025
-
-
+Created with ❤️ by **Cheryl Mbani** | © 2025
