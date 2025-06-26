@@ -6,17 +6,20 @@ function main(){
     addNewPostListener();
 
     document.getElementById('post-list')
-    .addEventListener("click", handlePostClick);
+    .addEventListener("click", handlePostClick); 
 
 }
+
+// we need to fetch the server's data from our db.json using fetch. GET http verb is default so no need to write it
 function displayPosts(){
-        fetch("http://localhost:3000/posts")
+        fetch("https://json-server-2nh0.onrender.com/posts")
         .then(response=> response.json())
         .then(posts=>{
             const ul = document.querySelector("#post-list ul");
             ul.innerHTML = "";
-            console.log(posts); // Added
+            console.log(posts); 
 
+            // we loop through each post,  get its title and id and create ad elemnt for it.
             posts.forEach(post =>{
                let li = document.createElement("li");
                li.textContent = post.title;
@@ -43,7 +46,7 @@ function handlePostClick(event){
     const id=clickedItem.dataset.id;
 
     if(id ==="local") return;
-    fetch(`http://localhost:3000/posts/${id}`)
+    fetch(`https://json-server-2nh0.onrender.com/posts/${id}`)
     .then(response => response.json())
     .then(post =>{
         showPost(post);
@@ -89,7 +92,7 @@ function addNewPostListener(){
         
         const newPost = {title, content, author};
 
-        fetch("http://localhost:3000/posts", {
+        fetch("https://json-server-2nh0.onrender.com/posts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
