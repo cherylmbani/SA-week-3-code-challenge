@@ -12,7 +12,7 @@ function main(){
 
 // we need to fetch the server's data from our db.json using fetch. GET http verb is default so no need to write it
 function displayPosts(){
-        fetch("https://json-server-1-oq42.onrender.com/posts")
+        fetch("https://json-server-2nh0.onrender.com/posts")
         .then(response=> response.json())
         .then(posts=>{
             const ul = document.querySelector("#post-list ul");
@@ -46,7 +46,7 @@ function handlePostClick(event){
     const id=clickedItem.dataset.id;
 
     if(id ==="local") return;
-    fetch(`https://json-server-1-oq42.onrender.com/posts/${id}`)
+    fetch(`https://json-server-2nh0.onrender.com/posts/${id}`)
     .then(response => response.json())
     .then(post =>{
         showPost(post);
@@ -92,7 +92,7 @@ function addNewPostListener(){
         
         const newPost = {title, content, author};
 
-        fetch("https://json-server-1-oq42.onrender.com/posts", {
+        fetch("https://json-server-2nh0.onrender.com/posts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
